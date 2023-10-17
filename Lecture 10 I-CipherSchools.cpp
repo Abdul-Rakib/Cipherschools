@@ -1,15 +1,16 @@
+//print array element using pointers
+
 #include <iostream>
 using namespace std;
 
-void swapping(int a, int b){
-    swap(a,b);
-    cout<<"After swapping a: "<<a<<" b: "<<b<<endl;
-}
-
 int main(){
+    int arr[10];
+    int *ptr;
+    ptr=arr;
     
-    int a,b;
-    a=10;b=20;
-    cout<<"Before swapping a: "<<a<<" b: "<<b<<endl;
-    swapping(a,b);
+    for(int i=0;i<10;i++){
+        cin>>arr[i];
+        cout<<*ptr<<endl;    //printingt he elements with pointer
+        ptr++; //incrementing pointing address. pointer points to the address of next element.
+    }
 }
